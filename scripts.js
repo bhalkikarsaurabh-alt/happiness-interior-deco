@@ -4,6 +4,33 @@
 
 'use strict';
 
+/* ── DARK MODE ── */
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Apply saved preference immediately
+const savedTheme = localStorage.getItem('hid-theme');
+if (savedTheme) html.setAttribute('data-theme', savedTheme);
+
+function toggleTheme() {
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  const next   = isDark ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('hid-theme', next);
+  // Update Calendly widget colour in dark mode
+  const cal = document.querySelector('.calendly-inline-widget');
+  if (cal) {
+    const base = 'https://calendly.com/happinessinteriordeco/discovery-call?hide_gdpr_banner=1&primary_color=c9a96e';
+    cal.dataset.url = base + (next === 'dark'
+      ? '&text_color=f5f3ef&background_color=1c1916'
+      : '&text_color=1a1a1a&background_color=ffffff');
+    // Reload the widget
+    if (window.Calendly) window.Calendly.initInlineWidgets();
+  }
+}
+
+if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+
 /* ── STICKY NAV ── */
 const stickyNav       = document.getElementById('stickyNav');
 const scrollIndicator = document.getElementById('scrollIndicator');

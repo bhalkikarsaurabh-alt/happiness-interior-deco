@@ -53,6 +53,78 @@
   --ease-out:cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ════════════════════════════════════════════
+   DARK MODE VARIABLES
+════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --cream:          #141210;
+  --cream-alt:      #1C1916;
+  --cream-deep:     #242018;
+  --white:          #1C1916;
+  --surface:        #1C1916;
+  --border:         rgba(201,169,110,0.15);
+  --border-hover:   #C9A96E;
+  --text-primary:   #F5F3EF;
+  --text-secondary: #A09890;
+  --text-muted:     #665E58;
+  --gold-light:     rgba(201,169,110,0.12);
+  --gold-text:      #C9A96E;
+  --gold-deep:      #C9A96E;
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.3);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.2);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.5), 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.6), 0 4px 8px rgba(0,0,0,0.3);
+  --shadow-xl:  0 16px 48px rgba(0,0,0,0.7), 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* Dark mode — section-level overrides */
+[data-theme="dark"] .pain-section,
+[data-theme="dark"] .portfolio-section,
+[data-theme="dark"] .process-section,
+[data-theme="dark"] .testimonials-section,
+[data-theme="dark"] .booking-section  { background: var(--cream-alt); }
+
+[data-theme="dark"] .program-section,
+[data-theme="dark"] .render-section,
+[data-theme="dark"] .services-section,
+[data-theme="dark"] .qualify-section,
+[data-theme="dark"] .faq-section       { background: var(--cream); }
+
+[data-theme="dark"] .guarantees-section { background: var(--cream-alt); }
+
+[data-theme="dark"] .sticky-nav {
+  background: rgba(20,18,16,0.96);
+  border-color: rgba(201,169,110,0.12);
+}
+[data-theme="dark"] .mobile-nav { background: var(--cream); }
+[data-theme="dark"] .comparison-table { background: var(--cream-alt); }
+[data-theme="dark"] .qualify-col { background: var(--cream-alt); }
+[data-theme="dark"] .qualify-col.yes { background: rgba(201,169,110,0.08); }
+[data-theme="dark"] .render-callout { background: rgba(201,169,110,0.07); }
+[data-theme="dark"] .testimonial-featured { background: #0E0C09; }
+[data-theme="dark"] .booking-form { background: var(--cream); }
+[data-theme="dark"] .booking-form input,
+[data-theme="dark"] .booking-form select { background: var(--cream-alt); color: var(--text-primary); }
+[data-theme="dark"] .modal-box,
+[data-theme="dark"] .exit-popup { background: var(--cream); }
+[data-theme="dark"] .mobile-bottom-bar { background: linear-gradient(0deg, var(--cream) 70%, transparent); }
+[data-theme="dark"] .gold-divider { background: rgba(201,169,110,0.12); }
+[data-theme="dark"] .section-label { background: rgba(201,169,110,0.12); }
+[data-theme="dark"] .tag { background: rgba(201,169,110,0.12); }
+[data-theme="dark"] .scarcity-line { background: rgba(201,169,110,0.1); }
+[data-theme="dark"] .included-bar { background: rgba(201,169,110,0.08); }
+[data-theme="dark"] .stats-bar { background: var(--cream); }
+[data-theme="dark"] .whatsapp-float { background: var(--cream); border-color: var(--border); }
+
+/* Dark mode — theme toggle icon swap */
+[data-theme="dark"] .icon-sun  { display: block; }
+[data-theme="dark"] .icon-moon { display: none;  }
+
+/* Smooth theme transition */
+body, body * {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
+
 /* ── RESET ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -161,6 +233,26 @@ input, select { font-family: var(--sans); }
 }
 .gold { color: var(--gold); }
 .italic { font-style: italic; }
+
+/* ── THEME TOGGLE BUTTON ── */
+.theme-toggle {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  background: transparent;
+}
+.theme-toggle:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-light);
+}
+.theme-toggle svg { width: 16px; height: 16px; }
+.icon-sun  { display: none; }   /* shown only in dark mode */
+.icon-moon { display: block; }  /* default: light mode shows moon */
 
 /* ════════════════════════════════════════════
    STICKY NAV — Airbnb clean white with shadow
@@ -1024,6 +1116,36 @@ input, select { font-family: var(--sans); }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease); }
 .faq-item.open .faq-answer { max-height: 320px; padding-bottom: 20px; }
 .faq-answer p { font-size: 14px; color: var(--text-secondary); line-height: 1.85; }
+
+/* ════════════════════════════════════════════
+   CALENDLY WRAP
+════════════════════════════════════════════ */
+.calendly-wrap {
+  width: 100%; max-width: 860px;
+  margin: 0 auto;
+}
+.calendly-info-row {
+  display: flex; justify-content: center; gap: 32px;
+  margin-bottom: 24px; flex-wrap: wrap;
+}
+.calendly-info-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+}
+.calendly-info-item svg {
+  width: 18px; height: 18px;
+  stroke: var(--gold); flex-shrink: 0;
+}
+.calendly-inline-widget {
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xl);
+}
+[data-theme="dark"] .calendly-inline-widget {
+  border-color: rgba(201,169,110,0.2);
+}
 
 /* ════════════════════════════════════════════
    BOOKING — Airbnb card form
