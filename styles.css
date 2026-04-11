@@ -1120,13 +1120,19 @@ input, select { font-family: var(--sans); }
 /* ════════════════════════════════════════════
    CALENDLY WRAP
 ════════════════════════════════════════════ */
-.calendly-wrap {
-  width: 100%; max-width: 860px;
+.calendly-cta-card {
+  width: 100%; max-width: 600px;
   margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
 }
 .calendly-info-row {
   display: flex; justify-content: center; gap: 32px;
-  margin-bottom: 24px; flex-wrap: wrap;
+  margin-bottom: 36px; flex-wrap: wrap;
 }
 .calendly-info-item {
   display: flex; align-items: center; gap: 8px;
@@ -1137,13 +1143,12 @@ input, select { font-family: var(--sans); }
   width: 18px; height: 18px;
   stroke: var(--gold); flex-shrink: 0;
 }
-.calendly-inline-widget {
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-xl);
+.btn-booking-popup {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 18px; padding: 18px 40px;
+  margin-bottom: 24px;
 }
-[data-theme="dark"] .calendly-inline-widget {
+[data-theme="dark"] .calendly-cta-card {
   border-color: rgba(201,169,110,0.2);
 }
 

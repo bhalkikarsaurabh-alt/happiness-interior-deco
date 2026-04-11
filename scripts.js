@@ -4,6 +4,16 @@
 
 'use strict';
 
+/* ── CALENDLY POPUP ── */
+const CALENDLY_URL = 'https://calendly.com/happinessinteriordeco/discovery-call?hide_gdpr_banner=1&primary_color=c9a96e&text_color=1a1a1a&background_color=ffffff';
+function openCalendly() {
+  if (window.Calendly) {
+    Calendly.initPopupWidget({ url: CALENDLY_URL });
+  } else {
+    window.open(CALENDLY_URL, '_blank');
+  }
+}
+
 /* ── DARK MODE ── */
 const themeToggle = document.getElementById('themeToggle');
 const html = document.documentElement;
