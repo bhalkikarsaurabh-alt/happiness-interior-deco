@@ -1428,11 +1428,11 @@ input, select { font-family: var(--sans); }
   .qualify-divider { display: none; }
   .render-grid { grid-template-columns: repeat(2,1fr); }
   .render-callout { flex-wrap: wrap; }
-  .timeline-line { left: 20px; transform: none; }
-  .timeline-step { flex-direction: column !important; align-items: flex-start; padding-left: 52px; }
+  .timeline-line { left: 24px; transform: none; }
+  .timeline-step { flex-direction: row !important; align-items: flex-start; padding-left: 60px; }
   .timeline-step .step-content { width: 100%; margin: 0 !important; }
-  .timeline-step .step-dot { position: absolute; left: 13px; top: 10px; margin-top: 0; }
-  .step-num { left: 0 !important; right: auto !important; }
+  .timeline-step .step-dot { position: absolute; left: 17px; top: 24px; margin-top: 0; flex-shrink: 0; }
+  .step-num { right: 12px !important; left: auto !important; font-size: 52px; }
 }
 
 /* ════════════════════════════════════════════
