@@ -868,8 +868,10 @@ input, select { font-family: var(--sans); }
   background: var(--gold);
   border-radius: 50%;
   border: 3px solid var(--white);
-  flex-shrink: 0; position: relative; z-index: 2;
-  margin-top: 28px;
+  position: absolute;
+  left: calc(50% - 7px);
+  top: 28px;
+  z-index: 2;
   box-shadow: 0 0 0 3px rgba(201,169,110,0.3);
 }
 
