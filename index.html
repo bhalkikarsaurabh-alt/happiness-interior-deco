@@ -7,8 +7,10 @@
 <meta name="description" content="Pune's fully managed luxury interior design service for 3BHK and 4BHK apartments. Fixed price. Full transparency. Design to handover. Book a free discovery call.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/jpeg" href="favicon.jpg">
+<link rel="apple-touch-icon" href="favicon.jpg">
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +20,10 @@
 ═══════════════════════════════════════════ -->
 <nav class="sticky-nav" id="stickyNav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">Happiness Interior Deco</a>
+    <a href="#" class="nav-logo">
+      <img src="logo.png" class="nav-logo-img" alt="Happiness Interior Deco">
+      <span>Happiness Interior Deco</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#portfolio">Our Work</a></li>
       <li><a href="#process">How It Works</a></li>
@@ -61,7 +66,10 @@
 
   <!-- Hero nav (transparent, inside hero) -->
   <header class="hero-nav">
-    <a href="#" class="nav-logo gold">Happiness Interior Deco</a>
+    <a href="#" class="nav-logo gold">
+      <img src="logo.png" class="nav-logo-img" alt="Happiness Interior Deco">
+      <span>Happiness Interior Deco</span>
+    </a>
     <ul class="nav-links hero-nav-links">
       <li><a href="#portfolio">Our Work</a></li>
       <li><a href="#process">How It Works</a></li>
@@ -304,6 +312,28 @@
     </div>
   </div>
 </div>
+
+<div class="gold-divider"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION — ABOUT THE FOUNDER
+═══════════════════════════════════════════ -->
+<section class="section founder-section" id="founder">
+  <div class="container">
+    <div class="founder-grid">
+      <div class="founder-image reveal">
+        <img src="founder.jpg" alt="Nanda Chougule, Founder &amp; Principal Designer, Happiness Interior Deco">
+      </div>
+      <div class="founder-text reveal">
+        <span class="section-label">ABOUT THE FOUNDER</span>
+        <h2 class="section-heading">Nanda Chougule</h2>
+        <p class="founder-title">Founder &amp; Principal Designer, Happiness Interior Deco</p>
+        <p class="founder-bio">With over a decade of crafting luxury interiors across Pune's most prestigious addresses, Nanda brings a rare combination of artistic vision and meticulous project management to every home she touches.</p>
+        <p class="founder-bio">Her philosophy is simple: your home should feel effortlessly you — timeless, personal, and built to last a lifetime. Every project she leads is a reflection of that unwavering belief.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════════════════════════════════
      SECTION 05 — HOW IT WORKS
@@ -749,9 +779,6 @@
         <a href="#" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
         </a>
-        <a href="#" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
       </div>
     </div>
     <div class="footer-links">
@@ -788,7 +815,7 @@
   <div class="footer-bottom">
     <span>© 2025 Happiness Interior Deco. All Rights Reserved.</span>
     <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
+      <a href="#" onclick="openPrivacyPolicy();return false;">Privacy Policy</a>
       <span class="dot">·</span>
       <a href="#">Terms</a>
     </div>
@@ -811,6 +838,62 @@
   <a href="#" onclick="openCalendly();return false;" class="btn-gold btn-mobile-bar">Book Your Discovery Call</a>
 </div>
 
+
+<!-- Privacy Policy Modal -->
+<div class="privacy-overlay" id="privacyOverlay" onclick="closePrivacyPolicy()">
+  <div class="privacy-modal" onclick="event.stopPropagation()">
+    <button class="privacy-close" onclick="closePrivacyPolicy()">×</button>
+    <div class="privacy-content">
+      <h2>Privacy Policy</h2>
+      <p>Nanda Chougule | Happiness Interior Deco understands that your privacy is important to you. We are committed to protecting the privacy of your personally-identifiable information as you use this website. This Privacy Policy tells you how we protect and use information that we gather from you. By using this website, you consent to the terms described in the most recent version of this Privacy Policy. You should also read our Terms of Use to understand the general rules about your use of this website, and any additional terms that may apply when you access particular services or materials on certain areas of this website. "We," "our" means Nanda Chougule | Happiness Interior Deco and its affiliates. "You," "your," "visitor," or "user" means the individual accessing this site.</p>
+
+      <h3>Personal and Non-Personal Information</h3>
+      <p>Our Privacy Policy identifies how we treat your personal and non-personal information.</p>
+
+      <h3>What Is Non-Personal Information and How Is It Collected and Used?</h3>
+      <p>Non personal information is information that cannot identify you. If you visit this web site to read information, such as information about one of our services, we may collect certain non-personal information about you from your computer's web browser. Because non-personal information cannot identify you or be tied to you in any way, there are no restrictions on the ways that we can use or share non-personal information.</p>
+      <p>Personal information is information that identifies you as an individual, such as your name, mailing address, e-mail address, telephone number, and fax number. We may collect personal information from you in a variety of ways:</p>
+      <ul>
+        <li>When you send us an application or other form</li>
+        <li>When you conduct a transaction with us, our affiliates, or others</li>
+        <li>When we collect information about you in support of a transaction, such as credit card information</li>
+        <li>In some places on this web site you have the opportunity to send us personal information about yourself, to elect to receive particular information, to purchase access to one of our products or services, or to participate in an activity</li>
+      </ul>
+
+      <h3>Are Cookies or Other Technologies Used to Collect Personal Information?</h3>
+      <p>Yes, we may use cookies and related technologies, such as web beacons, to collect information on our web site. A cookie is a text file that is placed on your hard disk by a web page server. Cookies cannot be used to run programs or deliver viruses to your computer. Cookies are uniquely assigned to you, and can only be read by a web server in the domain that issued the cookie to you.</p>
+      <p>One of the primary purposes of cookies is to provide a convenience feature to save you time. When you return to the same Nanda Chougule | Happiness Interior Deco website, the information you previously provided can be retrieved, so you can easily use the features that you customized.</p>
+      <p>We may use web beacons to count visitors to the web pages on the web site or to monitor how our users navigate the web site, and we may include web beacons in e-mail messages in order to count how many messages sent were actually opened, acted upon or forwarded.</p>
+      <p>Third party vendors also may use cookies on our web site. All data collected by this third party on behalf of Nanda Chougule | Happiness Interior Deco is used solely by or on behalf of Nanda Chougule | Happiness Interior Deco and is shared externally only on an anonymous, aggregated basis.</p>
+      <p>You have the ability to accept or decline cookies. Most Web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. If you choose to decline cookies, you may not be able to fully experience the interactive features of the Nanda Chougule | Happiness Interior Deco websites you visit.</p>
+
+      <h3>How Does Nanda Chougule | Happiness Interior Deco Use Personal Information?</h3>
+      <p>Nanda Chougule | Happiness Interior Deco may keep and use personal information we collect from or about you to provide you with access to this web site or other products or services, to respond to your requests, to bill you for products/services you purchased, and to provide ongoing service and support, to contact you with information that might be of interest to you, including information about products and services of ours and of others, or ask for your opinion about our products or the products of others, for record keeping and analytical purposes and to research, develop and improve programs, products, services and content.</p>
+
+      <h3>Does Nanda Chougule | Happiness Interior Deco Share Personal Information With Others?</h3>
+      <p>We will not share your personal information collected from this web site with an unrelated third party without your permission, except as otherwise provided in this Privacy Policy. In the ordinary course of business, we may share some personal information with companies that we hire to perform services or functions on our behalf.</p>
+      <p>We will not sell, exchange or publish your personal information, except in conjunction with a corporate sale, merger, dissolution, or acquisition. We may be legally compelled to release your personal information in response to a court order, subpoena, search warrant, law or regulation.</p>
+
+      <h3>How Is Personal Information Used for Communications?</h3>
+      <p>We may contact you periodically by e-mail, mail or telephone to provide information regarding programs, products, services and content that may be of interest to you. The e-mail response or confirmation may include your personal information. We cannot guarantee that our e-mails to you will be secure from unauthorized interception.</p>
+
+      <h3>How Is Personal Information Secured?</h3>
+      <p>We have implemented generally accepted standards of technology and operational security in order to protect personally-identifiable information from loss, misuse, alteration, or destruction. Only authorized personnel and third-party vendors have access to your personal information, and these employees and vendors are required to treat this information as confidential. Despite these precautions, we cannot guarantee that unauthorized persons will not obtain access to your personal information.</p>
+
+      <h3>Links</h3>
+      <p>This site contains links to other sites that provide information that we consider to be interesting. Nanda Chougule | Happiness Interior Deco is not responsible for the privacy practices or the content of such web sites.</p>
+
+      <h3>How Can a User Access, Change, and/or Delete Personal Information?</h3>
+      <p>You may access, correct, update, and/or delete any personally-identifiable information that you submit to the web site. You may also unsubscribe from mailing lists or any registrations on the web site. To do so, please either follow instructions on the page of the web site on which you have provided such information or contact us at <a href="mailto:hello@happinessinterior.in">hello@happinessinterior.in</a></p>
+
+      <h3>Children's Privacy</h3>
+      <p>Nanda Chougule | Happiness Interior Deco will not intentionally collect any personal information (such as a child's name or email address) from children under the age of 13. If you think that we have collected personal information from a child under the age of 13, please contact us.</p>
+
+      <h3>Changes</h3>
+      <p>Nanda Chougule | Happiness Interior Deco reserves the right to modify this statement at any time. Any changes to this Privacy Policy will be listed in this section, and if such changes are material, a notice will be included on the homepage of the web site for a period of time. If you have any questions about privacy at any websites operated by Nanda Chougule | Happiness Interior Deco or about our website practices, please contact us at <a href="mailto:hello@happinessinterior.in">hello@happinessinterior.in</a></p>
+    </div>
+  </div>
+</div>
 
 <script src="scripts.js"></script>
 </body>

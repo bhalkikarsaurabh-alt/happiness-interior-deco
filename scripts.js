@@ -128,7 +128,7 @@ window.closeModal = function() {
   modalOverlay.classList.remove('active');
   document.body.style.overflow = '';
 };
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeExitPopup(); } });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeExitPopup(); closePrivacyPolicy(); } });
 
 /* ── BEFORE / AFTER SLIDER ── */
 const baSlider  = document.getElementById('baSlider');
@@ -259,6 +259,16 @@ if (statsBar) {
   }, { threshold: 0.5 });
   statsObserver.observe(statsBar);
 }
+
+/* ── PRIVACY POLICY MODAL ── */
+window.openPrivacyPolicy = function() {
+  document.getElementById('privacyOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+};
+window.closePrivacyPolicy = function() {
+  const overlay = document.getElementById('privacyOverlay');
+  if (overlay) { overlay.classList.remove('active'); document.body.style.overflow = ''; }
+};
 
 /* ── SMOOTH ANCHOR LINKS ── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
